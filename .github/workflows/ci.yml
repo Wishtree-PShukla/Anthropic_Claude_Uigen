@@ -44,7 +44,7 @@ jobs:
 
       - name: Run Claude Code
         id: claude
-        uses: anthropic/claude-code-action@beta
+        uses: anthropics/claude-code-action@beta
         with:
           api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           custom_instructions: |
@@ -53,7 +53,6 @@ jobs:
             are being written to logs.txt. If needed, you can query the
             db with the 'sqlite3' cli. If needed, use the mcp__playwright
             set of tools to launch a browser and interact with the app.
-
           mcp_config: |
             {
               "mcpServers": {
@@ -65,6 +64,7 @@ jobs:
                     "localhost:3000;cdn.tailwindcss.com;esm.sh"
                   ]
                 }
+              }
             }
-          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,..."
+          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click"
 
