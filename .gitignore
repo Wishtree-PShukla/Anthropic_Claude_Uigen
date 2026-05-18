@@ -1,0 +1,8 @@
+CLAUDE.md
+CLAUDE.local.md
+.env
+node_modules/
+.next/
+prisma/dev.db
+.claude/settings.local.json
+.playwright-mcp/
